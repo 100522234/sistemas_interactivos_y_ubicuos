@@ -1,0 +1,2 @@
+En esta carpeta se encuentran dos archivos un .js en el que se encuentran las funciones que podrá realizar nuestra página web y un .html donde se incluirá la estructura visual. 
+En este archivo se verá el ejercicio en el cual puedes girar, rotar y mover la imagen desde el movil y ver este desplazamiento en la pantalla del ordenador. 

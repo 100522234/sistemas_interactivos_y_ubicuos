@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>App de Recetas - Bienvenida</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="/funciones_js/idioma.js"></script>
+</head>
+<body>
+    <div class="pantalla-app">
+        <h2 data-i18n="bienvenido">Bienvenido a la app de recetas ...</h2>
+        
+        <!-- Imagen de placeholder -->
+        <img src="/imagenes/pagina_inicio.jpg" alt="Cocinando" class="imagen-central">
+        
+        <span class="texto-equipo">Grupo 82 - Equipo 03</span>
+        
+        <!-- Botón que interactúa con clic -->
+        <button id="btnEmpezar" data-i18n="btn_empezar" class="boton-empezar">✓ Empezar</button>
+    </div>
+
+    <!-- Cargamos primero la lógica compartida y luego la específica -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script> <!--paquete para reconocimiento de voz-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/funciones_js/gestos.js"></script>
+    <script src="/funciones_js/logicaGeneral.js"></script>
+    <script src="/funciones_js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Control por Gestos</title>
+    <style>
+        body { background: #111; color: white; font-family: Arial; text-align: center; padding: 20px; }
+        #estado { font-size: 24px; margin: 20px 0; padding: 15px; background: #222; border-radius: 10px; }
+        #gesto { font-size: 40px; font-weight: bold; color: #4CAF50; min-height: 60px; }
+        video { width: 100%; max-width: 400px; border-radius: 10px; transform: scaleX(-1); }
+    </style>
+</head>
+<body>
+    <h2>📱 Control de Gestos</h2>
+    <div id="estado">Conectando...</div>
+    <div id="gesto">—</div>
+    <video id="camaraMovil" autoplay playsinline></video>
+
+    <script src="/funciones_js/idioma.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1646424915/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3.1640029074/camera_utils.js"></script>
+    <script>
+        const socket = io();
+        const divEstado = document.getElementById('estado');
+        const divGesto = document.getElementById('gesto');
+
+        socket.on('connect', () => {
+            divEstado.textContent = '✅ Conectado al servidor';
+        });
+        socket.on('disconnect', () => {
+            divEstado.textContent = '❌ Desconectado';
+        });
+
+        function emitirGesto(gesto) {
+            socket.emit('gestoDetectado', gesto);
+            divGesto.textContent = gesto;
+            setTimeout(() => { divGesto.textContent = '—'; }, 1500);
+        }
+
+        let ultimoGesto = 0;
+        const COOLDOWN = 1500;
+
+        function dedosExtendidos(lm) {
+            return [
+                lm[8].y  < lm[6].y,
+                lm[12].y < lm[10].y,
+                lm[16].y < lm[14].y,
+                lm[20].y < lm[18].y,
+                Math.abs(lm[4].x - lm[2].x) > 0.04
+            ];
+        }
+
+        function detectarGesto(lm) {
+            const d = dedosExtendidos(lm);
+            const todos = d.every(Boolean);
+            if (todos) return 'ABRIR_VIDEO';
+            return null;
+        }
+
+        const hands = new Hands({
+            locateFile: f => `https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1646424915/${f}`
+        });
+
+        hands.setOptions({
+            maxNumHands: 1,
+            modelComplexity: 0,
+            minDetectionConfidence: 0.7,
+            minTrackingConfidence: 0.5
+        });
+
+        hands.onResults((results) => {
+            if (!results.multiHandLandmarks?.length) {
+                divEstado.textContent = '🔍 Buscando mano...';
+                return;
+            }
+            divEstado.textContent = '✋ Mano detectada!';
+            const gesto = detectarGesto(results.multiHandLandmarks[0]);
+            const ahora = Date.now();
+            if (gesto && ahora - ultimoGesto > COOLDOWN) {
+                ultimoGesto = ahora;
+                emitirGesto(gesto);
+            }
+        });
+
+        const video = document.getElementById('camaraMovil');
+
+        const camara = new Camera(video, {
+            onFrame: async () => {
+                await hands.send({ image: video });
+            },
+            width: 320,
+            height: 240
+        });
+
+        camara.start()
+            .then(() => {
+                divEstado.textContent = '✅ Cámara activa — muestra la mano';
+            })
+            .catch((err) => {
+                divEstado.textContent = '❌ Error cámara: ' + err;
+            });
+    </script>
+</body>
+</html>

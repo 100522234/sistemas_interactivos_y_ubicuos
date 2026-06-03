@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ejercicio 3: Multitouch</title>
+    <style>
+        body { margin: 0; height: 100vh; display: flex; justify-content: center; align-items: center; background-color: #1a1a1a; overflow: hidden; touch-action: none; }
+        #contenedor { width: 300px; height: 300px; perspective: 1000px; }
+        #imagen { width: 100%; height: 100%; background-image: url('https://picsum.photos/600/600'); background-size: cover; background-position: center; border: 5px solid white; transform-origin: center; }
+        #instrucciones { position: fixed; top: 20px; color: white; text-align: center; width: 100%; font-family: sans-serif; pointer-events: none; }
+    </style>
+</head>
+<body>
+    <div id="instrucciones">Usa dos dedos para hacer zoom y rotar</div>
+    <div id="contenedor">
+        <div id="imagen"></div>
+    </div>
+    <script src="funciones.js"></script>
+</body>
+</html>

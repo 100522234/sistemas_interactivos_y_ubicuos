@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.pantalla-app {
+    background-color: #d9d9d9;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 800px;
+    height: 500px;
+    padding: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto-inferior {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+}
+
+.boton-prueba {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #ffccb3;
+    border: 1px dashed #ff4d4d;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #333;
+}
+
+.contenido-resumen, .contenido-paso {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.contenido-resumen img, .contenido-paso img {
+    width: 300px;
+    border-radius: 8px;
+}
+
+.lista-ingredientes {
+    white-space: pre-line;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.cabecera-pestanas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    background-color: #fff;
+    border-bottom: 2px solid #ccc;
+    border-radius: 10px 10px 0 0;
+}
+
+.pestana, .pestana-nueva {
+    padding: 10px 20px;
+    border-right: 1px solid #ccc;
+    cursor: pointer;
+    font-weight: bold;
+    color: #666;
+}
+
+.pestana.activa {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+.zona-botones-prueba {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+/* Estilos para la cuadrícula de selección */
+.cuadricula-recetas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.tarjeta {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjeta img {
+    width: 200px;
+    height: 120px;
+    object-fit: cover; /* Esto evita que las fotos se deformen */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.tarjeta span {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Ajuste para que los botones no pisen el texto inferior */
+.contenedor-inferior {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.texto-comando {
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Contenedor con scroll para las instrucciones */
+.contenedor-scroll-instrucciones {
+    width: 100%;
+    height: 300px; /* Altura fija para que no pise el texto de abajo */
+    overflow-y: auto; /* Activa el scroll vertical */
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.cuadricula-instrucciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px;
+}
+
+.tarjeta-instruccion {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tarjeta-instruccion img {
+    width: 120px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.tarjeta-instruccion span {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* --- ESTILOS DEL MODAL DE VÍDEO GIGANTE --- */
+.fondo-oscuro-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background-color: #222222; /* Gris muy oscuro casi negro */
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-instruccion-video {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.pantalla-app-video {
+    background-color: #d9d9d9;
+    width: 700px;
+    padding: 20px 20px 30px 20px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-video-relativo {
+    position: relative;
+    width: 560px;
+    height: 315px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background-color: #000;
+}
+
+.icono-pausa-gigante {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    background-color: white;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none; /* Evita que el clic se bloquee */
+    border: 10px solid black;
+    color: black;
+    z-index: 10;
+}
+
+.controles-inferiores-video {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    align-self: flex-start;
+    margin-left: 70px;
+}
+
+.barra-volumen-fondo {
+    width: 200px;
+    height: 8px;
+    background-color: #555;
+    border-radius: 4px;
+    position: relative;
+}
+
+.barra-volumen-nivel {
+    height: 100%;
+    background-color: #ff66b3; /* Color rosa del volumen */
+    border-radius: 4px;
+}

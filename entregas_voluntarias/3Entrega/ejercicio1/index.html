@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clima por Voz</title>
+
+  <!-- Fuentes de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="pagina">
+
+    <!-- CABECERA -->
+    <header class="cabecera">
+      <div class="cabecera-etiqueta">Ejercicio Fetch · GPS + Open-Meteo</div>
+      <h1 class="titulo">Clima<br/><em>por voz</em></h1>
+    </header>
+
+    <main class="contenido">
+    
+      <!-- MICRÓFONO -->  
+      <section class="seccion-microfono">
+        <button id="botonMic" title="Pulsa y habla">
+          <span class="icono-mic">🎙</span>
+        </button>
+        <p id="textoEstado" class="texto-estado">Di <strong>"¿Cuál es el clima?"</strong> para empezar</p>
+      </section>
+
+      <!-- TRANSCRIPCIÓN -->
+      <section class="seccion-transcripcion">
+        <span class="etiqueta-campo">Transcripción detectada</span>
+        <div id="transcripcion" class="caja-transcripcion">Esperando voz…</div>
+      </section>
+
+      <!-- LOADER -->
+      <div id="loader" class="loader-oculto">
+        <span class="loader-punto"></span>
+        <span class="loader-punto"></span>
+        <span class="loader-punto"></span>
+        <span class="loader-texto">Obteniendo clima</span>
+      </div>
+
+      <!-- TARJETA CLIMA -->
+      <div id="tarjetaClima" class="tarjeta-clima oculto">
+
+        <!-- Ubicación GPS y hora de la consulta -->
+        <div class="clima-cabecera">
+          <span id="climaUbicacion" class="clima-ubicacion">📍 —</span>
+          <span id="climaHora" class="clima-hora">—</span>
+        </div>
+
+        <!-- Temperatura principal y descripción del estado del cielo -->
+        <div class="clima-cuerpo">
+          <div id="climaTemp" class="clima-temperatura">—°C</div>
+          <div id="climaDesc" class="clima-descripcion">—</div>
+        </div>
+
+        <!-- Viento, dirección y coordenadas -->
+        <div class="clima-datos">
+          <div class="dato-item">
+            <span class="dato-icono">💨</span>
+            <span class="dato-etiqueta">Viento</span>
+            <span id="climaViento" class="dato-valor">— km/h</span>
+          </div>
+          <div class="dato-item">
+            <span class="dato-icono">🧭</span>
+            <span class="dato-etiqueta">Dirección</span>
+            <span id="climaDireccion" class="dato-valor">—°</span>
+          </div>
+          <div class="dato-item">
+            <span class="dato-icono">🌐</span>
+            <span class="dato-etiqueta">Latitud</span>
+            <span id="climaLat" class="dato-valor">—</span>
+          </div>
+          <div class="dato-item">
+            <span class="dato-icono">🌐</span>
+            <span class="dato-etiqueta">Longitud</span>
+            <span id="climaLon" class="dato-valor">—</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ERROR -->
+      <div id="tarjetaError" class="tarjeta-error oculto"></div>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie">
+      <p>Palabras clave: <code>clima</code> · <code>temperatura</code> · <code>tiempo</code></p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

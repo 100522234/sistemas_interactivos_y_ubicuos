@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Instrucciones</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="/funciones_js/idioma.js"></script>
+</head>
+<body>
+    <div class="pantalla-app">
+        <h3 data-i18n="titulo_instrucciones">INSTRUCCIONES DE INTERACCIÓN</h3>
+        
+        <div class="contenedor-scroll-instrucciones">
+            <div class="cuadricula-instrucciones">
+                <div class="tarjeta-instruccion"><span data-i18n="interaccion_1">INTERACCIÓN 1</span><img src="/imagenes/interaccion_1.jpg" alt="Gesto 1"><span data-i18n="ABRIR VIDEO EXPLICATIVO">PASO EXPLICADO</span></div>
+                <div class="tarjeta-instruccion"><span data-i18n="interaccion_2">INTERACCIÓN 2</span><img src="/imagenes/interaccion_2.jpg" alt="Gesto 2"><span data-i18n="CONFIRMAR">PASO EXPLICADO</span></div>
+                <div class="tarjeta-instruccion"><span data-i18n="interaccion_3">INTERACCIÓN 3</span><img src="/imagenes/interaccion_3.jpg" alt="Gesto 3"><span data-i18n="RECHAZAR">PASO EXPLICADO</span></div>
+                <div class="tarjeta-instruccion"><span data-i18n="interaccion_4">INTERACCIÓN 4</span><img src="/imagenes/interaccion_4.jpg" alt="Gesto 4"><span data-i18n="PAUSAR / REANUDAR VIDEO">PASO EXPLICADO</span></div>
+                <div class="tarjeta-instruccion"><span data-i18n="interaccion_5">INTERACCIÓN 5</span><img src="/imagenes/interaccion_5.jpg" alt="Gesto 5"><span data-i18n="SALIR DEL VIDEO (TÁCTIL)">PASO EXPLICADO</span></div>
+                <div class="tarjeta-instruccion"><span data-i18n="interaccion_6">INTERACCIÓN 6</span><img src="/imagenes/interaccion_6.jpg" alt="Gesto 6"><span data-i18n="ALTERNAR RECETA (TÁCTIL)">PASO EXPLICADO</span></div>
+                <div class="tarjeta-instruccion"><span data-i18n="interaccion_7">INTERACCIÓN 7</span><img src="/imagenes/interaccion_7.jpg" alt="Gesto 7"><span data-i18n="ABRIR NUEVA RECETA (TÁCTIL)">PASO EXPLICADO</span></div>
+                <div class="tarjeta-instruccion"><span data-i18n="interaccion_8">INTERACCIÓN 8</span><img src="/imagenes/interaccion_8.jpg" alt="Gesto 8"><span data-i18n="FINALIZAR RECETA">PASO EXPLICADO</span></div>
+            </div>
+        </div>
+
+        
+        <div class="zona-botones-prueba">
+            <button id="btnSimularVozEmpezar" class="boton-prueba">🛠️ Simular Voz: "Empezar"</button>
+            <button id="btnVolverRecetaActiva" class="boton-prueba" style="display: none; background-color: #b3d9ff;">🛠️Volver a mi receta</button>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script src="/funciones_js/gestos.js"></script>
+    <script src="/funciones_js/logicaGeneral.js"></script>
+    <script src="/funciones_js/instrucciones.js"></script>
+
+    <script>
+        if (typeof aplicarIdiomaAlDOM === 'function') aplicarIdiomaAlDOM();
+    </script>
+</body>
+</html>

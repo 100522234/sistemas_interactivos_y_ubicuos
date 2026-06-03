@@ -1,0 +1,2 @@
+En esta carpeta se encuentran dos archivos un .js en el que se encuentran las funciones que podrá realizar nuestra página web y un .html donde se incluirá la estructura visual. 
+En este archivo se verá el ejercicio en el que puedes interactuar con las coordenadas del mapa e ir desplazándote sin moverte de tu ubicacíon.

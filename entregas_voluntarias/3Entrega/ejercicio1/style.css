@@ -1,0 +1,345 @@
+
+/* elimina márgenes */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* VARIABLES */
+:root {
+  --fondo: #f5f0e8;
+  --papel: #fdf8f0;
+  --borde: #d9cfc0;
+  --tinta: #1a1208;
+  --tinta-suave: #7a6e5f;
+  --acento: #b5390a;
+  --acento-claro: #f0d5c8;
+  --verde: #2d6a4f;
+  --verde-claro: #d8f3dc;
+}
+
+/* BODY */
+body {
+  background-color: var(--fondo);
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='0.8' fill='%23c4b89a' opacity='0.35'/%3E%3C/svg%3E");
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 1.5rem 4rem;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--tinta);
+}
+
+/* PÁGINA */
+.pagina {
+  width: 100%;
+  max-width: 520px;
+}
+
+/* CABECERA*/
+.cabecera {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1.5px solid var(--borde);
+}
+
+/* etiqueta pequeña encima del título */
+.cabecera-etiqueta {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+  margin-bottom: 0.8rem;
+}
+
+/* título principal grande */
+.titulo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.0;
+  color: var(--tinta);
+}
+
+/* palabra en cursiva dentro del título */
+.titulo em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--acento);
+}
+
+/* CONTENIDO */
+.contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* sección micrófono */
+.seccion-microfono {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--papel);
+  border: 1.5px solid var(--borde);
+  border-radius: 14px;
+  padding: 1.4rem 1.6rem;
+  box-shadow: 3px 3px 0 var(--borde);
+}
+
+/* botón micrófono */
+#botonMic {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0; /* no se escoge si hay poco espacio */
+  border-radius: 50%;
+  border: 2px solid var(--tinta);
+  background: var(--tinta);
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 2px 2px 0 var(--acento);
+}
+
+/* sube ligeramente y agranda la sombra */
+#botonMic:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--acento);
+}
+
+/* efecto al hacer clic */
+#botonMic:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--acento);
+}
+
+/* estado cuando el micrófono está escuchando */
+#botonMic.escuchando {
+  background: var(--acento);
+  border-color: var(--acento);
+  animation: latido 1.1s ease-in-out infinite;
+}
+
+/* animación del pulso cuando está escuchando */
+@keyframes latido {
+  0%, 100% { box-shadow: 2px 2px 0 var(--tinta); }
+  50%       { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(181,57,10,0.08), 2px 2px 0 var(--tinta); }
+}
+
+/* texto de estado: mensaje debajo del botón */
+.texto-estado {
+  font-size: 0.88rem;
+  color: var(--tinta-suave);
+  line-height: 1.5;
+}
+
+.texto-estado strong { color: var(--tinta); }
+.texto-estado.activo { color: var(--verde); font-weight: 500; }
+.texto-estado.error  { color: var(--acento); }
+
+/* sección transcripción */
+.seccion-transcripcion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.etiqueta-campo {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+}
+
+/* caja donde aparece el tento reconocido por voz */
+.caja-transcripcion {
+  background: var(--papel);
+  border: 1.5px solid var(--borde);
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--tinta-suave);
+  min-height: 3rem;
+  line-height: 1.6;
+  transition: border-color 0.25s, color 0.25s, background 0.25s;
+}
+
+.caja-transcripcion.con-contenido {
+  color: var(--tinta);
+  border-color: var(--verde);
+  background: var(--verde-claro);
+}
+
+.loader-oculto {
+  display: none;
+}
+
+.loader-visible {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+
+.loader-punto {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--acento);
+  animation: bote 0.8s ease-in-out infinite;
+}
+
+/* retraso escalonado para que los puntos boten uno tras otro */
+.loader-punto:nth-child(2) { animation-delay: 0.15s; }
+.loader-punto:nth-child(3) { animation-delay: 0.30s; }
+
+@keyframes bote {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50%       { transform: translateY(-6px); opacity: 1; }
+}
+
+.loader-texto {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--tinta-suave);
+  margin-left: 0.3rem;
+}
+
+/* tarjeta clima */
+.tarjeta-clima {
+  background: var(--papel);
+  border: 1.5px solid var(--borde);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 4px 4px 0 var(--borde);
+  animation: aparecer 0.35s ease;
+}
+
+.oculto { display: none; }
+
+/* animación de entrada desde abajo */
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* franja superior de la tarjeta con ubicación y hora */
+.clima-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.4rem;
+  border-bottom: 1px solid var(--borde);
+  background: rgba(181,57,10,0.04);
+}
+
+.clima-ubicacion,
+.clima-hora {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--tinta-suave);
+  letter-spacing: 0.04em;
+}
+
+/* zona central con temperatura y descripción */
+.clima-cuerpo {
+  padding: 1.6rem 1.4rem 1.2rem;
+  border-bottom: 1px solid var(--borde);
+}
+
+/* número grande de temperatura */
+.clima-temperatura {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--acento);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.clima-descripcion {
+  font-size: 1rem;
+  color: var(--tinta);
+}
+
+/* datos del clima */
+.clima-datos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* cada celda de dato */
+.dato-item {
+  padding: 1rem 1.4rem;
+  border-right: 1px solid var(--borde);
+  border-bottom: 1px solid var(--borde);
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.dato-item:nth-child(even) { border-right: none; }
+
+/* la última fila no tiene borde inferior */
+.dato-item:nth-child(3),
+.dato-item:nth-child(4)    { border-bottom: none; }
+
+.dato-icono { font-size: 1rem; }
+
+.dato-etiqueta {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--tinta-suave);
+}
+
+.dato-valor {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--tinta);
+}
+
+/* tarjeta error */
+.tarjeta-error {
+  background: #fdf0ec;
+  border: 1.5px solid #e8b4a0;
+  border-radius: 12px;
+  padding: 1rem 1.3rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--acento);
+  line-height: 1.6;
+  box-shadow: 3px 3px 0 #e8b4a0;
+  animation: aparecer 0.3s ease;
+}
+
+/* PIE DE PÁGINA */
+.pie {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--borde);
+  text-align: center;
+}
+
+.pie p {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--tinta-suave);
+}
+
+.pie code {
+  background: var(--acento-claro);
+  color: var(--acento);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-family: inherit;
+}

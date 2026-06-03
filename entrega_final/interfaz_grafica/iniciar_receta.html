@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Receta</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="/funciones_js/idioma.js"></script>
+</head>
+<body>
+    <div class="pantalla-app">
+        <h3 data-i18n="titulo_iniciar" style="align-self: flex-start;">INICIAR RECETA</h3>
+        <span style="position: absolute; top: 20px; right: 30px; font-size: 40px; font-weight: bold;">?</span>
+
+        <div class="contenido-resumen">
+            <img id="imgResumen" src="" alt="Foto receta">
+            <div>
+                <strong data-i18n="label_ingredientes">Ingredientes:</strong>
+                <p id="textoIngredientes" class="lista-ingredientes"></p>
+            </div>
+        </div>
+
+        
+
+        <div class="zona-botones-prueba">
+            <button id="btnSimularEmpezar" class="boton-prueba">🛠️ Simular Voz: "Comenzar"</button>
+            <button id="btnGestoAyuda" class="boton-prueba">🛠️ Simular Voz: "Ayuda"</button>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script src="/funciones_js/gestos.js"></script>
+    <script src="/funciones_js/logicaGeneral.js"></script>
+    <script src="/funciones_js/iniciarReceta.js"></script>
+</body>
+</html>

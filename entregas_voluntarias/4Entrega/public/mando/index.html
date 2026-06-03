@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mando a Distancia</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding-top: 50px; transition: background-color 0.3s; }
+        button { padding: 20px; font-size: 20px; margin: 10px; width: 80%; border-radius: 10px; cursor: pointer; }
+        .btn-rojo { background-color: #ff4c4c; color: white; border: none; }
+        .btn-azul { background-color: #4c4cff; color: white; border: none; }
+        
+    </style>
+</head>
+<body>
+    <h1>Mando a distancia</h1>
+    
+    <button class="btn-rojo" onclick="enviarComando('red')">Poner Rojo</button>
+    <button class="btn-azul" onclick="enviarComando('blue')">Poner Azul</button>    
+    <button style="background-color: #28a745; color: white; border: none;" onclick="activarSensores()">Activar Giroscopio</button>
+    <p id="info-giroscopio" style="font-size: 24px; font-weight: bold; margin-top: 20px;">Inclinación: Esperando...</p>
+
+    <p><small>Gira tu móvil a los lados para usar el giroscopio.</small></p>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

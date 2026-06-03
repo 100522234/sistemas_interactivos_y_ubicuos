@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipo Interactivo de Video</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Control de Video por Voz y Gestos</h1>
+    
+    <div class="guide">
+        <h3>Comandos de voz disponibles:</h3>
+        <ul>
+            <li><strong>"Reproducir"</strong>: Iniciar el video</li>
+            <li><strong>"Pausar"</strong>: Pausar el video</li>
+            <li><strong>"Subir"</strong>: Aumentar volumen</li>
+            <li><strong>"Bajar"</strong>: Reducir volumen</li>
+        </ul>
+        <h3>Gestos de movimiento:</h3>
+        <p>Da un pequeño golpe de muñeca (inclina fuerte) hacia la izquierda o derecha para retroceder o adelantar 5 segundos.</p>
+    </div>
+
+    <button id="startBtn">Iniciar Micrófono y Sensores</button>
+    <div id="status" class="neutral">Haz clic en el botón para comenzar.</div>
+
+    <video id="miVideo" src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
+
+    <script src="app.js"></script>
+</body>
+</html>

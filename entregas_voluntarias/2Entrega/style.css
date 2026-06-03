@@ -1,0 +1,54 @@
+/* Estilos generales de la página */
+body { 
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+    padding: 20px; 
+    background-color: #f4f4f9; 
+}
+
+/* Estilo para el botón de inicio */
+button { 
+    padding: 15px 30px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    border: none; 
+    background-color: #007bff; 
+    color: white; 
+    border-radius: 5px; 
+    margin-bottom: 20px; 
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el contenedor y el vídeo */
+video { 
+    width: 100%; 
+    max-width: 600px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+
+/* Estilos para la caja de la guía de comandos (Antigua .guia) */
+.guide { 
+    background: #fff; 
+    padding: 20px; 
+    margin: 20px auto; 
+    max-width: 600px; 
+    border-radius: 8px; 
+    text-align: left; 
+}
+
+/* Estilos para los mensajes de error/éxito (Antiguo #mensaje) */
+#status { 
+    padding: 15px; 
+    margin: 15px auto; 
+    max-width: 600px; 
+    font-weight: bold; 
+    border-radius: 8px; 
+}
+
+.error { background-color: #ffcccc; color: #cc0000; }
+.success { background-color: #ccffcc; color: #006600; }
+.neutral { background-color: #e0e0e0; color: #333; }
