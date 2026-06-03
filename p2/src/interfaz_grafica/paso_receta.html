@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Paso de Receta</title>
+    <link rel="stylesheet" href="estilos.css">
+    <!-- API de YouTube para poder controlarlo con gestos/botones -->
+    <script src="/funciones_js/idioma.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+</head>
+<body>
+    <video id="camaraOculta" style="display:none;"></video>
+    <div class="pantalla-app">
+        <div class="cabecera-pestanas" id="contenedorPestanas"></div>
+        <span style="position: absolute; top: 50px; right: 30px; font-size: 40px; font-weight: bold;">?</span>
+
+        <div class="contenido-paso">
+            <!-- Zona Izquierda: Imagen -->
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <img id="imgPaso" src="" alt="Paso actual" style="width: 300px; border-radius: 8px;">
+            </div>
+            
+            <!-- Zona Derecha: Textos -->
+            <div class="textos-paso">
+                <h4 id="tituloReceta"></h4>
+                <strong id="tituloPaso"></strong>
+                <p id="descripcionPaso"></p>
+            </div>
+        </div>
+
+        <!-- ZONA DE CONTROLES: TODOS LOS BOTONES JUNTOS -->
+        <div class="zona-botones-prueba">
+            <button id="btnManualAnterior" class="boton-prueba" style="background-color: #ffffff; border: 2px solid #ccc;">⬅️ Atrás</button>
+            <button id="btnManualSiguiente" class="boton-prueba" style="background-color: #ffffff; border: 2px solid #ccc;">Siguiente ➡️</button>
+            
+            <button id="btnGestoAnterior" class="boton-prueba" style="background-color: #bbff99;">🛠️ Giroscopio: Atrás - Siguiente</button>
+            <!-- BOTÓN DE VÍDEO MOVIDO AQUÍ Y AJUSTADO -->
+            <button id="btnGestoAbrirVideo" class="boton-prueba" style="display: none; background-color: #b3d9ff;">🛠️ Gesto: Vídeo</button>
+            <button id="btnGestoAlternar" class="boton-prueba" style="background-color: #ffff99;">🛠️ Táctil: Cambiar Pestaña</button>
+            <button id="btnGestoAbrir" class="boton-prueba" style="background-color: #ffff99;">🛠️ Táctil: + Abrir Nueva</button>
+            <button id="btnGestoCerrarReceta" class="boton-prueba" style="background-color: #ff9999;">🛠️ Gesto: Tapar Cámara</button>
+            <button id="btnGestoAyudaPaso" class="boton-prueba">🛠️ Simular Voz: "Ayuda"</button>
+        </div>
+    </div>
+
+    <!-- PANTALLA GIGANTE DEL VÍDEO (Superpuesta y oculta por defecto) -->
+    <div id="modalVideoGestos" class="fondo-oscuro-modal" style="display: none;">
+
+        <div data-i18n="video_instruccion" class="texto-instruccion-video" style="margin-bottom: 10px; font-size: 18px;">
+            PAUSAR VIDEO Y REANUDARLO: COMANDO DE<br>PARAR CON LA PALMA ABIERTA FRENTE A LA CAMARA
+        </div>
+        
+        <div class="pantalla-app-video" style="padding: 15px 20px 15px 20px; width: 600px;">
+            <span style="position: absolute; top: 5px; right: 15px; font-size: 35px; font-weight: bold; color: #2c3e50;">?</span>
+            <h3 data-i18n="video_abriendo" style="margin-top: 5px; margin-bottom: 5px; font-weight: normal; color: #333; font-size: 18px;">
+                ABRIENDO VIDEO EXPLICATIVO
+            </h3>
+            
+            <div class="contenedor-video-relativo" style="width: 480px; height: 270px; margin-top: 10px; margin-bottom: 15px;">
+                <!-- El iframe de YouTube se meterá aquí automáticamente -->
+                <div id="reproductorYoutube"></div>
+                
+                <!-- Icono de pausa gigante (encima del vídeo) -->
+                <div id="iconoPausaGigante" class="icono-pausa-gigante" style="display: none; width: 100px; height: 100px; font-size: 50px;">
+                    ⏸️
+                </div>
+            </div>
+
+            <div class="controles-inferiores-video" style="margin-left: 0; justify-content: center; width: 100%;">
+                <span style="font-size: 16px; color: #333;">VOLUMEN:</span>
+                <div class="barra-volumen-fondo" style="width: 150px; height: 6px;">
+                    <div id="barraVolumenNivel" class="barra-volumen-nivel" style="width: 20%;"></div>
+                </div>
+                <span id="textoVolumen" style="font-size: 16px; color: #333;">20</span>
+            </div>
+        </div>
+
+        <!-- Botones para simular los gestos -->
+        <div style="margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; width: 100%; max-width: 650px; background-color: rgba(255,255,255,0.1); padding: 10px; border-radius: 10px;">
+            <button id="btnSimularCerrarVideo" class="boton-prueba" style="padding: 6px 10px; font-size: 11px; margin-top: 0;">🛠️ Salir</button>
+            <button id="btnSimularPausa" class="boton-prueba" style="padding: 6px 10px; font-size: 11px; margin-top: 0;">🛠️ Parar/Play</button>
+            <button id="btnSimularVolMas" class="boton-prueba" style="padding: 6px 10px; font-size: 11px; margin-top: 0;">🛠️ Simular Voz: "Volumen al X por ciento"</button>
+        </div>
+    </div>
+
+    <!-- PANTALLA DE CONFIRMACIÓN DE CIERRE (Modal) -->
+    <div id="modalConfirmarCierre" class="fondo-oscuro-modal" style="display: none;">
+        
+         <h2 data-i18n="paso_finalizar" style="color: white; margin-bottom: 20px; font-weight: normal;">
+            FINALIZAR LA RECETA
+        </h2>
+        
+        <div class="pantalla-app-video" style="width: 550px; padding: 40px 20px;">
+            <span style="position: absolute; top: 10px; right: 20px; font-size: 50px; font-weight: bold; color: #2c3e50;">?</span>
+            <h3 data-i18n="paso_confirmar_pregunta" style="margin-top: 0; font-size: 24px; font-weight: normal; color: #333;">
+                ¿¿ DESEAS FINALIZAR LA RECETA ??
+            </h3>
+            
+            <!-- Contenedor de las dos opciones -->
+            <div style="display: flex; justify-content: center; gap: 50px; margin-top: 30px;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="/imagenes/confirmar.png" alt="Confirmar" style="width: 130px; height: 130px; object-fit: contain;">
+                    <span data-i18n="paso_confirmar" style="font-size: 18px; color: #333; margin-top: 15px;">CONFIRMAR</span>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="/imagenes/rechazar.png" alt="Rechazar" style="width: 130px; height: 130px; object-fit: contain;">
+                    <span data-i18n="paso_rechazar" style="font-size: 18px; color: #333; margin-top: 15px;">RECHAZAR</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botones de simulación  -->
+        <div style="margin-top: 25px; display: flex; gap: 15px;">
+            <button id="btnSimularConfirmar" class="boton-prueba" style="background-color: #99ff99;">🛠️ Gesto: Confirmar</button>
+            <button id="btnSimularRechazar" class="boton-prueba" style="background-color: #ff9999;">🛠️ Gesto: Rechazar</button>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script src="/funciones_js/gestos.js"></script>
+    <script src="/funciones_js/logicaGeneral.js"></script>
+    <script src="/funciones_js/pasoReceta.js"></script>
+    <script src="funciones_js/NFC.js"></script>
+    <script src="/funciones_js/giroscopio.js"></script>
+    <script src="/funciones_js/tactil.js"></script>
+    <script>
+        const socketOrdenador = io();
+
+        let ultimoGesto = 0;
+        const COOLDOWN = 1500;
+
+        function dedosExtendidos(lm) {
+            return [
+                lm[8].y  < lm[6].y,
+                lm[12].y < lm[10].y,
+                lm[16].y < lm[14].y,
+                lm[20].y < lm[18].y,
+                Math.abs(lm[4].x - lm[2].x) > 0.04
+            ];
+        }
+
+        function detectarGesto(lm) {
+            const d = dedosExtendidos(lm);
+            const todos = d.every(Boolean);
+            if (todos) return 'ABRIR_VIDEO';
+            // Pulgar arriba: pulgar extendido hacia arriba, demás dedos cerrados
+            const pulgArribaExtendido = lm[4].y < lm[3].y && lm[4].y < lm[2].y;
+            const dedosCerrados = !d[0] && !d[1] && !d[2] && !d[3];
+            const pulgHorizontal = Math.abs(lm[4].x - lm[3].x) < 0.1;
+            if (pulgArribaExtendido && dedosCerrados && pulgHorizontal) return 'CONFIRMAR';
+
+            // Pulgar abajo: pulgar extendido hacia abajo, demás dedos cerrados
+            const pulgAbajoExtendido = lm[4].y > lm[3].y && lm[4].y > lm[2].y;
+            if (pulgAbajoExtendido && dedosCerrados && pulgHorizontal) return 'RECHAZAR';
+            return null;
+        }
+
+        const hands = new Hands({
+            locateFile: f => `https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1646424915/${f}`
+        });
+
+        hands.setOptions({
+            maxNumHands: 1,
+            modelComplexity: 0,
+            minDetectionConfidence: 0.7,
+            minTrackingConfidence: 0.5
+        });
+
+        hands.onResults((results) => {
+            if (!results.multiHandLandmarks?.length) return;
+            const gesto = detectarGesto(results.multiHandLandmarks[0]);
+            const ahora = Date.now();
+            if (gesto && ahora - ultimoGesto > COOLDOWN) {
+                ultimoGesto = ahora;
+                console.log('Gesto detectado:', gesto);
+                socketOrdenador.emit('gestoDetectado', gesto);
+            }
+        });
+
+        // Canvas para medir brillo
+        const canvasBrillo = document.createElement('canvas');
+        const ctxBrillo = canvasBrillo.getContext('2d');
+        const UMBRAL_OSCURIDAD = 15;
+        const FRAMES_PARA_CONFIRMAR = 3;
+        let framesTapada = 0;
+        let camaraTapadaEmitida = false;
+
+        const video = document.getElementById('camaraOculta');
+
+        function medirBrillo() {
+            if (!video.videoWidth || !video.videoHeight) return 255;
+            canvasBrillo.width = video.videoWidth;
+            canvasBrillo.height = video.videoHeight;
+            ctxBrillo.drawImage(video, 0, 0, canvasBrillo.width, canvasBrillo.height);
+            const datos = ctxBrillo.getImageData(0, 0, canvasBrillo.width, canvasBrillo.height).data;
+            let suma = 0;
+            for (let i = 0; i < datos.length; i += 4) {
+                suma += (datos[i] + datos[i + 1] + datos[i + 2]) / 3;
+            }
+            return suma / (datos.length / 4);
+        }
+
+        const camara = new Camera(video, {
+            onFrame: async () => {
+                await hands.send({ image: video });
+
+                const brillo = medirBrillo();
+
+                if (brillo < UMBRAL_OSCURIDAD) {
+                    framesTapada++;
+                    if (framesTapada >= FRAMES_PARA_CONFIRMAR && !camaraTapadaEmitida) {
+                        camaraTapadaEmitida = true;
+                        const modalVideoAbierto = document.getElementById('modalVideoGestos').style.display !== 'none';
+                        if (modalVideoAbierto) cerrarVideoModal();
+                        abrirModalCierre();
+                    }
+                } else {
+                    framesTapada = 0;
+                    camaraTapadaEmitida = false;
+                }
+            },
+            width: 320, height: 240
+        });
+
+        console.log('Iniciando cámara...');
+        camara.start().then(() => {
+            console.log('Cámara iniciada correctamente');
+        }).catch((err) => {
+            console.log('Error al iniciar cámara:', err);
+        });
+        camara.start();
+
+        // Recibir acciones del servidor
+        socketOrdenador.on('ejecutarAccion', (gesto) => {
+            console.log('Acción recibida:', gesto);
+            if (gesto === 'ABRIR_VIDEO') {
+                const modalCierreAbierto = document.getElementById('modalConfirmarCierre').style.display !== 'none';
+                const modalVideoAbierto = document.getElementById('modalVideoGestos').style.display !== 'none';
+                if (modalCierreAbierto) return;
+                if (modalVideoAbierto) {
+                    alternarPausaPlay();
+                } else {
+                    abrirVideoModal();
+                }
+            }
+            if (gesto === 'CONFIRMAR') {
+                const modalCierreAbierto = document.getElementById('modalConfirmarCierre').style.display !== 'none';
+                if (modalCierreAbierto) confirmarCierreReceta();
+                return;
+            }
+
+            if (gesto === 'RECHAZAR') {
+                const modalCierreAbierto = document.getElementById('modalConfirmarCierre').style.display !== 'none';
+                if (modalCierreAbierto) rechazarCierre();
+                return;
+            }
+        });
+    </script>
+      
+</body>
+</html>

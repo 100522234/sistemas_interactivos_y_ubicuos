@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Selección de Receta</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="/funciones_js/idioma.js"></script>
+</head>
+<body>
+    
+    <div class="pantalla-app">
+        <h3 data-i18n="titulo_seleccion">SELECCIONAR LAS RECETAS</h3>
+        <span style="position: absolute; top: 20px; right: 30px; font-size: 40px; font-weight: bold;">?</span>
+        
+        <div id="contenedorRecetas" class="cuadricula-recetas">
+            <p data-i18n="cargando_recetas">Cargando recetas...</p>
+        </div>
+
+        <div class="contenedor-inferior">
+            <div style="display: flex; gap: 10px;">
+                <button id="btnSim1" class="boton-prueba">🛠️ Voz: "1"</button>
+                <button id="btnSim2" class="boton-prueba">🛠️ Voz: "2"</button>
+                <button id="btnSim3" class="boton-prueba">🛠️ Voz: "3"</button>
+                <button id="btnSim4" class="boton-prueba">🛠️ Voz: "4"</button>
+                <button id="btnGestoAyuda" class="boton-prueba"; margin-top: 10px;">🛠️ Voz: "Ayuda"</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script src="/funciones_js/gestos.js"></script>
+    <script src="/funciones_js/logicaGeneral.js"></script>
+    <script src="/funciones_js/seleccion.js"></script>
+</body>
+</html>

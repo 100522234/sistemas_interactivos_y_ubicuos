@@ -1,0 +1,508 @@
+[{
+  "_id": {
+    "$oid": "69cae60205d8e6f2aff84074"
+  },
+  "identificador": "tortilla",
+  "titulo": {
+    "es": "TORTILLA DE PATATA",
+    "en": "SPANISH OMELETTE",
+    "fr": "OMELETTE ESPAGNOLE",
+    "de": "SPANISCHES OMELETT",
+    "it": "FRITTATA DI PATATE",
+    "pt": "TORTILHA ESPANHOLA",
+    "nl": "SPAANSE OMELET",
+    "ja": "スペインオムレツ",
+    "zh": "西班牙土豆饼"
+  },
+  "ingredientes": {
+    "es": "4 Patatas medianas\n5 Huevos\n1 Cebolla\nAceite de oliva\nSal al gusto",
+    "en": "4 medium Potatoes\n5 Eggs\n1 Onion\nOlive oil\nSalt to taste",
+    "fr": "4 Pommes de terre moyennes\n5 Œufs\n1 Oignon\nHuile d'olive\nSel au goût",
+    "de": "4 mittelgroße Kartoffeln\n5 Eier\n1 Zwiebel\nOlivenöl\nSalz nach Geschmack",
+    "it": "4 Patate medie\n5 Uova\n1 Cipolla\nOlio d'oliva\nSale q.b.",
+    "pt": "4 Batatas médias\n5 Ovos\n1 Cebola\nAzeite de oliva\nSal a gosto",
+    "nl": "4 middelgrote aardappelen\n5 Eieren\n1 Ui\nOlijfolie\nZout naar smaak",
+    "ja": "中くらいのジャガイモ4個\n卵5個\nタマネギ1個\nオリーブオイル\n塩少々",
+    "zh": "中等土豆4个\n鸡蛋5个\n洋葱1个\n橄榄油\n盐适量"
+  },
+  "imagenPrincipal": "/imagenes/tortilla_principal.jpg",
+  "pasos": [
+    {
+      "numero": 1,
+      "texto": {
+        "es": "Pela las patatas y la cebolla. Córtalas en láminas finas y regulares para que se hagan a la vez.",
+        "en": "Peel the potatoes and onion. Slice them thinly and evenly so they cook at the same time.",
+        "fr": "Épluchez les pommes de terre et l'oignon. Coupez-les en fines tranches régulières pour qu'ils cuisent en même temps.",
+        "de": "Kartoffeln und Zwiebel schälen. In dünne, gleichmäßige Scheiben schneiden, damit sie gleichzeitig garen.",
+        "it": "Sbuccia le patate e la cipolla. Tagliale a fette sottili e uniformi in modo che cuociano insieme.",
+        "pt": "Descasque as batatas e a cebola. Corte-as em fatias finas e uniformes para que cozinhem ao mesmo tempo.",
+        "nl": "Schil de aardappelen en ui. Snijd ze in dunne, gelijkmatige plakjes zodat ze tegelijk gaar worden.",
+        "ja": "ジャガイモとタマネギの皮をむき、均一に薄切りにして同時に火が通るようにします。",
+        "zh": "将土豆和洋葱去皮，切成薄片，使其同时煮熟。"
+      },
+      "imagen": "/imagenes/tortilla_p1.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/y02InXmsKbc"
+    },
+    {
+      "numero": 2,
+      "texto": {
+        "es": "Fríe la patata y la cebolla en una sartén con abundante aceite a fuego medio durante 15-20 minutos.",
+        "en": "Fry the potato and onion in a pan with plenty of oil over medium heat for 15-20 minutes.",
+        "fr": "Faites frire les pommes de terre et l'oignon dans une poêle avec beaucoup d'huile à feu moyen pendant 15-20 minutes.",
+        "de": "Kartoffeln und Zwiebel in einer Pfanne mit reichlich Öl bei mittlerer Hitze 15-20 Minuten braten.",
+        "it": "Friggi le patate e la cipolla in una padella con abbondante olio a fuoco medio per 15-20 minuti.",
+        "pt": "Frite a batata e a cebola em uma frigideira com bastante óleo em fogo médio por 15-20 minutos.",
+        "nl": "Bak de aardappel en ui in een pan met veel olie op middelhoog vuur gedurende 15-20 minuten.",
+        "ja": "フライパンにたっぷりの油を入れ、中火でジャガイモとタマネギを15〜20分炒めます。",
+        "zh": "在平底锅中用大量油以中火煎炒土豆和洋葱15-20分钟。"
+      },
+      "imagen": "/imagenes/tortilla_p2.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/b32yU8dWVy4"
+    },
+    {
+      "numero": 3,
+      "texto": {
+        "es": "Bate los huevos en un bol grande. Escurre bien la patata y la cebolla y mézclalas con el huevo. Añade sal.",
+        "en": "Beat the eggs in a large bowl. Drain the potato and onion well and mix them with the egg. Add salt.",
+        "fr": "Battez les œufs dans un grand bol. Égouttez bien les pommes de terre et l'oignon et mélangez-les avec l'œuf. Ajoutez du sel.",
+        "de": "Eier in einer großen Schüssel verquirlen. Kartoffeln und Zwiebel gut abtropfen lassen und mit dem Ei vermischen. Salz hinzufügen.",
+        "it": "Sbatti le uova in una ciotola grande. Scola bene le patate e la cipolla e mescolale con l'uovo. Aggiungi sale.",
+        "pt": "Bata os ovos em uma tigela grande. Escorra bem a batata e a cebola e misture-as com o ovo. Adicione sal.",
+        "nl": "Klop de eieren in een grote kom. Laat de aardappel en ui goed uitlekken en meng ze met het ei. Voeg zout toe.",
+        "ja": "大きなボウルに卵を溶きます。ジャガイモとタマネギをよく水切りして卵と混ぜ、塩を加えます。",
+        "zh": "在大碗中打散鸡蛋。将土豆和洋葱沥干，与鸡蛋混合，加盐。"
+      },
+      "imagen": "/imagenes/tortilla_p3.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/kHgABHjlzjs"
+    },
+    {
+      "numero": 4,
+      "texto": {
+        "es": "Vierte la mezcla en una sartén con unas gotas de aceite. Cuaja por un lado y dale la vuelta con un plato.",
+        "en": "Pour the mixture into a pan with a few drops of oil. Cook on one side and flip it using a plate.",
+        "fr": "Versez le mélange dans une poêle avec quelques gouttes d'huile. Faites coaguler d'un côté et retournez avec une assiette.",
+        "de": "Die Mischung in eine Pfanne mit einigen Tropfen Öl geben. Auf einer Seite stocken lassen und mit einem Teller wenden.",
+        "it": "Versa il composto in una padella con qualche goccia d'olio. Cuoci da un lato e giralo con un piatto.",
+        "pt": "Despeje a mistura em uma frigideira com algumas gotas de óleo. Cozinhe de um lado e vire com um prato.",
+        "nl": "Giet het mengsel in een pan met een paar druppels olie. Laat aan één kant stollen en keer om met een bord.",
+        "ja": "数滴の油を入れたフライパンに混合物を注ぎます。片面を固め、皿を使ってひっくり返します。",
+        "zh": "将混合物倒入加了几滴油的平底锅中。一面凝固后用盘子翻面。"
+      },
+      "imagen": "/imagenes/tortilla_p4.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/-wdXkzh5QOY"
+    },
+    {
+      "numero": 5,
+      "texto": {
+        "es": "Cuaja por el otro lado durante 2 minutos más y saca la tortilla a un plato limpio.",
+        "en": "Cook on the other side for 2 more minutes and slide the omelette onto a clean plate.",
+        "fr": "Faites coaguler de l'autre côté pendant 2 minutes supplémentaires et déposez l'omelette sur une assiette propre.",
+        "de": "Auf der anderen Seite weitere 2 Minuten stocken lassen und das Omelett auf einen sauberen Teller gleiten lassen.",
+        "it": "Cuoci dall'altro lato per altri 2 minuti e metti la frittata su un piatto pulito.",
+        "pt": "Cozinhe do outro lado por mais 2 minutos e coloque a tortilha em um prato limpo.",
+        "nl": "Bak aan de andere kant nog 2 minuten en schuif de omelet op een schoon bord.",
+        "ja": "もう片面をさらに2分間焼き、きれいな皿に取り出します。",
+        "zh": "另一面再煎2分钟，将煎蛋饼滑到干净的盘子上。"
+      },
+      "imagen": "/imagenes/tortilla_p5.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/GH55AK1Zims"
+    },
+    {
+      "numero": 6,
+      "texto": {
+        "es": "¡Receta completada! Has terminado la Tortilla de Patata.",
+        "en": "Recipe complete! You have finished the Spanish Omelette.",
+        "fr": "Recette terminée! Vous avez fini l'Omelette Espagnole.",
+        "de": "Rezept abgeschlossen! Sie haben das Spanische Omelett fertiggestellt.",
+        "it": "Ricetta completata! Hai terminato la Frittata di Patate.",
+        "pt": "Receita concluída! Você terminou a Tortilha Espanhola.",
+        "nl": "Recept voltooid! U heeft de Spaanse Omelet afgerond.",
+        "ja": "レシピ完成！スペインオムレツができました。",
+        "zh": "食谱完成！您已完成西班牙土豆饼。"
+      },
+      "imagen": "/imagenes/exito.jpg",
+      "videoYoutube": ""
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69cae60205d8e6f2aff84075"
+  },
+  "identificador": "macarrones",
+  "titulo": {
+    "es": "MACARRONES CON CARNE",
+    "en": "MEAT PASTA",
+    "fr": "MACARONIS À LA VIANDE",
+    "de": "NUDELN MIT FLEISCH",
+    "it": "MACCHERONI CON CARNE",
+    "pt": "MACARRÃO COM CARNE",
+    "nl": "MACARONI MET VLEES",
+    "ja": "ミートマカロニ",
+    "zh": "肉酱通心粉"
+  },
+  "ingredientes": {
+    "es": "300g Macarrones\n250g Carne picada\n400g Tomate triturado\n1 Cebolla\nQueso rallado",
+    "en": "300g Macaroni\n250g Minced meat\n400g Crushed tomato\n1 Onion\nGrated cheese",
+    "fr": "300g Macaronis\n250g Viande hachée\n400g Tomate concassée\n1 Oignon\nFromage râpé",
+    "de": "300g Makkaroni\n250g Hackfleisch\n400g Gehackte Tomaten\n1 Zwiebel\nGeriebener Käse",
+    "it": "300g Maccheroni\n250g Carne macinata\n400g Pomodoro tritato\n1 Cipolla\nFormaggio grattugiato",
+    "pt": "300g Macarrão\n250g Carne moída\n400g Tomate triturado\n1 Cebola\nQueijo ralado",
+    "nl": "300g Macaroni\n250g Gehakt\n400g Gepureerde tomaat\n1 Ui\nGeraspte kaas",
+    "ja": "マカロニ300g\nひき肉250g\nトマト缶400g\nタマネギ1個\nすりおろしチーズ",
+    "zh": "通心粉300g\n肉末250g\n番茄碎400g\n洋葱1个\n奶酪丝"
+  },
+  "imagenPrincipal": "/imagenes/macarrones_principal.jpg",
+  "pasos": [
+    {
+      "numero": 1,
+      "texto": {
+        "es": "Hierve abundante agua con sal en una olla. Añade los macarrones y cuece durante 10 minutos.",
+        "en": "Boil plenty of salted water in a pot. Add the macaroni and cook for 10 minutes.",
+        "fr": "Faites bouillir beaucoup d'eau salée dans une casserole. Ajoutez les macaronis et faites cuire 10 minutes.",
+        "de": "Reichlich Salzwasser in einem Topf zum Kochen bringen. Makkaroni hinzufügen und 10 Minuten kochen.",
+        "it": "Porta a ebollizione abbondante acqua salata in una pentola. Aggiungi i maccheroni e cuoci per 10 minuti.",
+        "pt": "Ferva bastante água com sal em uma panela. Adicione o macarrão e cozinhe por 10 minutos.",
+        "nl": "Breng een grote pot gezouten water aan de kook. Voeg de macaroni toe en kook 10 minuten.",
+        "ja": "鍋にたっぷりの塩水を沸騰させ、マカロニを加えて10分茹でます。",
+        "zh": "在锅中煮大量盐水，加入通心粉煮10分钟。"
+      },
+      "imagen": "/imagenes/macarrones_p1.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/692ECEmEANU"
+    },
+    {
+      "numero": 2,
+      "texto": {
+        "es": "Pica la cebolla muy fina y sofríela en una sartén con aceite hasta que esté transparente.",
+        "en": "Finely chop the onion and sauté it in a pan with oil until transparent.",
+        "fr": "Hachez finement l'oignon et faites-le revenir dans une poêle avec de l'huile jusqu'à ce qu'il soit translucide.",
+        "de": "Zwiebel fein hacken und in einer Pfanne mit Öl glasig dünsten.",
+        "it": "Trita finemente la cipolla e soffriggila in una padella con olio finché non diventa trasparente.",
+        "pt": "Pique a cebola bem fina e refogue em uma frigideira com óleo até ficar transparente.",
+        "nl": "Snijd de ui zeer fijn en fruit hem in een pan met olie tot hij glazig is.",
+        "ja": "タマネギをみじん切りにし、油を入れたフライパンで透き通るまで炒めます。",
+        "zh": "将洋葱切碎，在平底锅中用油炒至透明。"
+      },
+      "imagen": "/imagenes/macarrones_p2.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/92MrSYo_lP8"
+    },
+    {
+      "numero": 3,
+      "texto": {
+        "es": "Añade la carne picada a la sartén. Salpimienta y cocina hasta que pierda el color crudo.",
+        "en": "Add the minced meat to the pan. Season with salt and pepper and cook until it loses its raw colour.",
+        "fr": "Ajoutez la viande hachée dans la poêle. Assaisonnez et cuisinez jusqu'à ce qu'elle perde sa couleur crue.",
+        "de": "Hackfleisch in die Pfanne geben. Mit Salz und Pfeffer würzen und garen, bis es keine rohe Farbe mehr hat.",
+        "it": "Aggiungi la carne macinata nella padella. Aggiusta di sale e pepe e cuoci finché non perde il colore crudo.",
+        "pt": "Adicione a carne moída à frigideira. Tempere com sal e pimenta e cozinhe até perder a cor crua.",
+        "nl": "Voeg het gehakt toe aan de pan. Breng op smaak met zout en peper en bak tot het niet meer rauw ziet.",
+        "ja": "ひき肉をフライパンに加え、塩コショウで味付けし、生の色がなくなるまで炒めます。",
+        "zh": "将肉末加入锅中，加盐和胡椒调味，炒至不再呈生肉色。"
+      },
+      "imagen": "/imagenes/macarrones_p3.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/QepgoC0wqYM"
+    },
+    {
+      "numero": 4,
+      "texto": {
+        "es": "Vierte el tomate triturado sobre la carne. Remueve y deja reducir a fuego lento durante 10 minutos.",
+        "en": "Pour the crushed tomato over the meat. Stir and let it reduce over low heat for 10 minutes.",
+        "fr": "Versez la tomate concassée sur la viande. Remuez et laissez réduire à feu doux pendant 10 minutes.",
+        "de": "Gehackte Tomaten über das Fleisch geben. Rühren und bei niedriger Hitze 10 Minuten einkochen lassen.",
+        "it": "Versa il pomodoro tritato sulla carne. Mescola e lascia ridurre a fuoco lento per 10 minuti.",
+        "pt": "Despeje o tomate triturado sobre a carne. Mexa e deixe reduzir em fogo baixo por 10 minutos.",
+        "nl": "Giet de gepureerde tomaat over het vlees. Roer en laat 10 minuten op laag vuur inkoken.",
+        "ja": "トマト缶を肉の上に注ぎ、混ぜて弱火で10分煮詰めます。",
+        "zh": "将番茄碎倒在肉上，搅拌后小火收汁10分钟。"
+      },
+      "imagen": "/imagenes/macarrones_p4.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/t8lyVOwhZ80"
+    },
+    {
+      "numero": 5,
+      "texto": {
+        "es": "Escurre la pasta, mézclala con la salsa en la sartén y espolvorea queso rallado por encima.",
+        "en": "Drain the pasta, mix it with the sauce in the pan and sprinkle grated cheese on top.",
+        "fr": "Égouttez les pâtes, mélangez-les avec la sauce dans la poêle et saupoudrez de fromage râpé.",
+        "de": "Nudeln abgießen, mit der Sauce in der Pfanne mischen und geriebenen Käse darüber streuen.",
+        "it": "Scola la pasta, mescolala con il sugo nella padella e spolvera con formaggio grattugiato.",
+        "pt": "Escorra a massa, misture com o molho na frigideira e polvilhe queijo ralado por cima.",
+        "nl": "Giet de pasta af, meng met de saus in de pan en bestrooi met geraspte kaas.",
+        "ja": "パスタをざるにあけ、フライパンのソースと混ぜ合わせ、すりおろしチーズをかけます。",
+        "zh": "将意大利面沥干，与锅中的酱汁混合，撒上奶酪丝。"
+      },
+      "imagen": "/imagenes/macarrones_p5.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/Fj-3eqRUsyQ"
+    },
+    {
+      "numero": 6,
+      "texto": {
+        "es": "¡Receta completada! Has terminado los Macarrones con Carne.",
+        "en": "Recipe complete! You have finished the Meat Pasta.",
+        "fr": "Recette terminée! Vous avez fini les Macaronis à la Viande.",
+        "de": "Rezept abgeschlossen! Sie haben die Nudeln mit Fleisch fertiggestellt.",
+        "it": "Ricetta completata! Hai terminato i Maccheroni con Carne.",
+        "pt": "Receita concluída! Você terminou o Macarrão com Carne.",
+        "nl": "Recept voltooid! U heeft de Macaroni met Vlees afgerond.",
+        "ja": "レシピ完成！ミートマカロニができました。",
+        "zh": "食谱完成！您已完成肉酱通心粉。"
+      },
+      "imagen": "/imagenes/exito.jpg",
+      "videoYoutube": ""
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69cae60205d8e6f2aff84076"
+  },
+  "identificador": "pollo_horno",
+  "titulo": {
+    "es": "POLLO ASADO CON LIMÓN",
+    "en": "LEMON ROAST CHICKEN",
+    "fr": "POULET RÔTI AU CITRON",
+    "de": "GEBRATENES HÄHNCHEN MIT ZITRONE",
+    "it": "POLLO ARROSTO AL LIMONE",
+    "pt": "FRANGO ASSADO COM LIMÃO",
+    "nl": "GEROOSTERDE KIP MET CITROEN",
+    "ja": "レモンローストチキン",
+    "zh": "柠檬烤鸡"
+  },
+  "ingredientes": {
+    "es": "1 Pollo entero\n3 Patatas\n2 Limones\n4 Dientes de ajo\nAceite, sal y tomillo",
+    "en": "1 Whole chicken\n3 Potatoes\n2 Lemons\n4 Garlic cloves\nOil, salt and thyme",
+    "fr": "1 Poulet entier\n3 Pommes de terre\n2 Citrons\n4 Gousses d'ail\nHuile, sel et thym",
+    "de": "1 Ganzes Hähnchen\n3 Kartoffeln\n2 Zitronen\n4 Knoblauchzehen\nÖl, Salz und Thymian",
+    "it": "1 Pollo intero\n3 Patate\n2 Limoni\n4 Spicchi d'aglio\nOlio, sale e timo",
+    "pt": "1 Frango inteiro\n3 Batatas\n2 Limões\n4 Dentes de alho\nÓleo, sal e tomilho",
+    "nl": "1 Hele kip\n3 Aardappelen\n2 Citroenen\n4 Knoflookteentjes\nOlie, zout en tijm",
+    "ja": "鶏1羽\nジャガイモ3個\nレモン2個\nニンニク4片\n油、塩、タイム",
+    "zh": "整鸡1只\n土豆3个\n柠檬2个\n大蒜4瓣\n油、盐和百里香"
+  },
+  "imagenPrincipal": "/imagenes/pollo_principal.jpg",
+  "pasos": [
+    {
+      "numero": 1,
+      "texto": {
+        "es": "Precalienta el horno a 200ºC. Pela las patatas, córtalas en rodajas gruesas y ponlas en una bandeja.",
+        "en": "Preheat the oven to 200ºC. Peel the potatoes, cut them into thick slices and place them on a baking tray.",
+        "fr": "Préchauffez le four à 200ºC. Épluchez les pommes de terre, coupez-les en grosses rondelles et placez-les sur une plaque.",
+        "de": "Den Ofen auf 200ºC vorheizen. Kartoffeln schälen, in dicke Scheiben schneiden und auf ein Backblech legen.",
+        "it": "Preriscalda il forno a 200ºC. Sbuccia le patate, tagliale a fette spesse e mettile su una teglia.",
+        "pt": "Pré-aqueça o forno a 200ºC. Descasque as batatas, corte-as em rodelas grossas e coloque em uma assadeira.",
+        "nl": "Verwarm de oven voor op 200ºC. Schil de aardappelen, snijd ze in dikke plakken en leg ze op een bakplaat.",
+        "ja": "オーブンを200ºCに予熱します。ジャガイモの皮をむき、厚切りにして天板に並べます。",
+        "zh": "将烤箱预热至200ºC。将土豆去皮，切成厚片，放在烤盘上。"
+      },
+      "imagen": "/imagenes/pollo_p1.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/WDHe3PM353M"
+    },
+    {
+      "numero": 2,
+      "texto": {
+        "es": "Coloca el pollo encima de las patatas. Salpimienta por dentro y por fuera.",
+        "en": "Place the chicken on top of the potatoes. Season with salt and pepper inside and out.",
+        "fr": "Placez le poulet sur les pommes de terre. Assaisonnez de sel et poivre à l'intérieur et à l'extérieur.",
+        "de": "Das Hähnchen auf die Kartoffeln legen. Innen und außen mit Salz und Pfeffer würzen.",
+        "it": "Metti il pollo sopra le patate. Salate e pepate dentro e fuori.",
+        "pt": "Coloque o frango em cima das batatas. Tempere com sal e pimenta por dentro e por fora.",
+        "nl": "Leg de kip op de aardappelen. Breng binnen en buiten op smaak met zout en peper.",
+        "ja": "ジャガイモの上に鶏を置き、内外に塩コショウをふります。",
+        "zh": "将鸡放在土豆上，内外均匀撒上盐和胡椒。"
+      },
+      "imagen": "/imagenes/pollo_p2.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/1RW24XxCUus"
+    },
+    {
+      "numero": 3,
+      "texto": {
+        "es": "Corta los limones por la mitad e introdúcelos dentro del pollo junto con los dientes de ajo enteros.",
+        "en": "Cut the lemons in half and place them inside the chicken along with the whole garlic cloves.",
+        "fr": "Coupez les citrons en deux et introduisez-les dans le poulet avec les gousses d'ail entières.",
+        "de": "Zitronen halbieren und zusammen mit den ganzen Knoblauchzehen in das Hähnchen legen.",
+        "it": "Taglia i limoni a metà e introducili nel pollo insieme agli spicchi d'aglio interi.",
+        "pt": "Corte os limões ao meio e coloque-os dentro do frango junto com os dentes de alho inteiros.",
+        "nl": "Snijd de citroenen doormidden en stop ze samen met de hele knoflookteentjes in de kip.",
+        "ja": "レモンを半分に切り、ニンニクのかけらとともに鶏の中に入れます。",
+        "zh": "将柠檬切成两半，与整颗大蒜一起塞入鸡腹内。"
+      },
+      "imagen": "/imagenes/pollo_p3.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/rjJCdInMZAs"
+    },
+    {
+      "numero": 4,
+      "texto": {
+        "es": "Rocía todo con un buen chorro de aceite de oliva y espolvorea el tomillo.",
+        "en": "Drizzle everything with a good splash of olive oil and sprinkle the thyme.",
+        "fr": "Arrosez le tout d'un bon filet d'huile d'olive et saupoudrez de thym.",
+        "de": "Alles mit einem guten Schuss Olivenöl beträufeln und Thymian darüber streuen.",
+        "it": "Irrora tutto con un buon filo d'olio d'oliva e cospargi il timo.",
+        "pt": "Regue tudo com um bom fio de azeite e polvilhe o tomilho.",
+        "nl": "Besprenkel alles met een flinke scheut olijfolie en bestrooi met tijm.",
+        "ja": "全体にオリーブオイルをたっぷりかけ、タイムをふりかけます。",
+        "zh": "在所有食材上淋上大量橄榄油，撒上百里香。"
+      },
+      "imagen": "/imagenes/pollo_p4.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/hqgcPiCcPJA"
+    },
+    {
+      "numero": 5,
+      "texto": {
+        "es": "Hornea durante 1 hora y 15 minutos, dándole la vuelta al pollo a la mitad del tiempo para que se dore igual.",
+        "en": "Bake for 1 hour and 15 minutes, turning the chicken halfway through so it browns evenly.",
+        "fr": "Faites cuire pendant 1 heure et 15 minutes, en retournant le poulet à mi-cuisson pour qu'il dore uniformément.",
+        "de": "1 Stunde und 15 Minuten backen, das Hähnchen zur Hälfte der Zeit wenden, damit es gleichmäßig bräunt.",
+        "it": "Cuoci per 1 ora e 15 minuti, girando il pollo a metà cottura per dorarlo uniformemente.",
+        "pt": "Asse por 1 hora e 15 minutos, virando o frango na metade do tempo para dourar por igual.",
+        "nl": "Bak 1 uur en 15 minuten, draai de kip halverwege om zodat hij gelijkmatig bruin wordt.",
+        "ja": "1時間15分焼き、途中で鶏をひっくり返して均一に焼き色をつけます。",
+        "zh": "烤1小时15分钟，中途将鸡翻面，使其均匀上色。"
+      },
+      "imagen": "/imagenes/pollo_p5.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/RFrJ3EJkr6Y"
+    },
+    {
+      "numero": 6,
+      "texto": {
+        "es": "¡Receta completada! Has terminado el Pollo Asado.",
+        "en": "Recipe complete! You have finished the Lemon Roast Chicken.",
+        "fr": "Recette terminée! Vous avez fini le Poulet Rôti au Citron.",
+        "de": "Rezept abgeschlossen! Sie haben das gebratene Hähnchen mit Zitrone fertiggestellt.",
+        "it": "Ricetta completata! Hai terminato il Pollo Arrosto al Limone.",
+        "pt": "Receita concluída! Você terminou o Frango Assado com Limão.",
+        "nl": "Recept voltooid! U heeft de Geroosterde Kip met Citroen afgerond.",
+        "ja": "レシピ完成！レモンローストチキンができました。",
+        "zh": "食谱完成！您已完成柠檬烤鸡。"
+      },
+      "imagen": "/imagenes/exito.jpg",
+      "videoYoutube": ""
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69cae60205d8e6f2aff84077"
+  },
+  "identificador": "guacamole",
+  "titulo": {
+    "es": "GUACAMOLE CASERO",
+    "en": "HOMEMADE GUACAMOLE",
+    "fr": "GUACAMOLE MAISON",
+    "de": "HAUSGEMACHTES GUACAMOLE",
+    "it": "GUACAMOLE FATTO IN CASA",
+    "pt": "GUACAMOLE CASEIRO",
+    "nl": "ZELFGEMAAKTE GUACAMOLE",
+    "ja": "手作りグアカモレ",
+    "zh": "自制鳄梨酱"
+  },
+  "ingredientes": {
+    "es": "3 Aguacates maduros\nMedia cebolla morada\n1 Tomate pequeño\nZumo de 1 lima\nCilantro y sal",
+    "en": "3 Ripe avocados\nHalf a red onion\n1 Small tomato\nJuice of 1 lime\nCoriander and salt",
+    "fr": "3 Avocats mûrs\nDemi oignon rouge\n1 Petite tomate\nJus d'1 citron vert\nCoriandre et sel",
+    "de": "3 Reife Avocados\nHalbe rote Zwiebel\n1 Kleine Tomate\nSaft 1 Limette\nKoriander und Salz",
+    "it": "3 Avocado maturi\nMezza cipolla rossa\n1 Pomodoro piccolo\nSucco di 1 lime\nCoriandolo e sale",
+    "pt": "3 Abacates maduros\nMeia cebola roxa\n1 Tomate pequeno\nSuco de 1 limão\nCoentro e sal",
+    "nl": "3 Rijpe avocado's\nHalve rode ui\n1 Kleine tomaat\nSap van 1 limoen\nKoriander en zout",
+    "ja": "熟したアボカド3個\n赤タマネギ半個\n小さなトマト1個\nライム1個の果汁\nコリアンダーと塩",
+    "zh": "熟鳄梨3个\n红洋葱半个\n小番茄1个\n1个青柠汁\n香菜和盐"
+  },
+  "imagenPrincipal": "/imagenes/guacamole_principal.jpg",
+  "pasos": [
+    {
+      "numero": 1,
+      "texto": {
+        "es": "Pica la cebolla morada, el tomate (sin semillas) y el cilantro fresco en trozos muy pequeños.",
+        "en": "Finely chop the red onion, tomato (without seeds) and fresh coriander into very small pieces.",
+        "fr": "Hachez finement l'oignon rouge, la tomate (sans graines) et la coriandre fraîche en très petits morceaux.",
+        "de": "Rote Zwiebel, Tomate (ohne Kerne) und frischen Koriander sehr fein hacken.",
+        "it": "Trita finemente la cipolla rossa, il pomodoro (senza semi) e il coriandolo fresco in pezzi molto piccoli.",
+        "pt": "Pique finamente a cebola roxa, o tomate (sem sementes) e o coentro fresco em pedaços bem pequenos.",
+        "nl": "Hak de rode ui, tomaat (zonder zaden) en verse koriander in zeer kleine stukjes.",
+        "ja": "赤タマネギ、トマト（種を除く）、フレッシュコリアンダーを非常に細かく刻みます。",
+        "zh": "将红洋葱、番茄（去籽）和新鲜香菜切成非常小的碎块。"
+      },
+      "imagen": "/imagenes/guacamole_p1.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/uuFsBHbihyg"
+    },
+    {
+      "numero": 2,
+      "texto": {
+        "es": "Corta los aguacates por la mitad, quítales el hueso y saca su contenido con ayuda de una cuchara.",
+        "en": "Cut the avocados in half, remove the pit and scoop out the flesh with a spoon.",
+        "fr": "Coupez les avocats en deux, retirez le noyau et récupérez la chair à l'aide d'une cuillère.",
+        "de": "Avocados halbieren, den Kern entfernen und das Fruchtfleisch mit einem Löffel herauslösen.",
+        "it": "Taglia gli avocado a metà, togli il nocciolo e scava la polpa con un cucchiaio.",
+        "pt": "Corte os abacates ao meio, retire o caroço e retire a polpa com a ajuda de uma colher.",
+        "nl": "Snijd de avocado's doormidden, verwijder de pit en schep het vruchtvlees eruit met een lepel.",
+        "ja": "アボカドを半分に切り、種を取り除き、スプーンで果肉をすくい出します。",
+        "zh": "将鳄梨切成两半，去掉核，用勺子挖出果肉。"
+      },
+      "imagen": "/imagenes/guacamole_p2.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/qVxktJ5lNRA"
+    },
+    {
+      "numero": 3,
+      "texto": {
+        "es": "Pon el aguacate en un bol amplio y machácalo con un tenedor hasta que quede una pasta con grumos.",
+        "en": "Put the avocado in a large bowl and mash it with a fork until it becomes a chunky paste.",
+        "fr": "Mettez l'avocat dans un grand bol et écrasez-le à la fourchette jusqu'à obtenir une pâte grumeleuse.",
+        "de": "Avocado in eine große Schüssel geben und mit einer Gabel zu einer stückigen Paste zerdrücken.",
+        "it": "Metti l'avocado in una ciotola capiente e schiaccialo con una forchetta fino a ottenere una pasta grossolana.",
+        "pt": "Coloque o abacate em uma tigela grande e amasse com um garfo até obter uma pasta com pedaços.",
+        "nl": "Doe de avocado in een grote kom en prak hem met een vork tot een grove pasta.",
+        "ja": "アボカドを大きなボウルに入れ、フォークで粗くつぶしてペースト状にします。",
+        "zh": "将鳄梨放入大碗中，用叉子捣成带有小块的糊状。"
+      },
+      "imagen": "/imagenes/guacamole_p3.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/K3xcGZLCitQ"
+    },
+    {
+      "numero": 4,
+      "texto": {
+        "es": "Añade inmediatamente el zumo de lima al aguacate para evitar que se oxide y se ponga negro.",
+        "en": "Immediately add the lime juice to the avocado to prevent it from oxidising and turning black.",
+        "fr": "Ajoutez immédiatement le jus de citron vert à l'avocat pour éviter qu'il ne s'oxyde et noircisse.",
+        "de": "Sofort den Limettensaft zur Avocado geben, damit sie sich nicht oxidiert und schwarz wird.",
+        "it": "Aggiungi subito il succo di lime all'avocado per evitare che si ossidi e diventi nero.",
+        "pt": "Adicione imediatamente o suco de limão ao abacate para evitar que oxide e fique preto.",
+        "nl": "Voeg onmiddellijk het limoensap toe aan de avocado om te voorkomen dat hij oxideert en zwart wordt.",
+        "ja": "アボカドがすぐに酸化して黒くならないよう、ライムジュースをすぐに加えます。",
+        "zh": "立即将青柠汁加入鳄梨中，防止其氧化变黑。"
+      },
+      "imagen": "/imagenes/guacamole_p4.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/3kuIcwrHP4s"
+    },
+    {
+      "numero": 5,
+      "texto": {
+        "es": "Incorpora la cebolla, el tomate y el cilantro. Añade sal al gusto y mezcla todo suavemente.",
+        "en": "Add the onion, tomato and coriander. Add salt to taste and mix everything gently.",
+        "fr": "Incorporez l'oignon, la tomate et la coriandre. Ajoutez du sel au goût et mélangez doucement.",
+        "de": "Zwiebel, Tomate und Koriander hinzufügen. Nach Geschmack salzen und alles vorsichtig vermischen.",
+        "it": "Incorpora la cipolla, il pomodoro e il coriandolo. Aggiungi sale a piacere e mescola delicatamente.",
+        "pt": "Adicione a cebola, o tomate e o coentro. Acrescente sal a gosto e misture tudo suavemente.",
+        "nl": "Voeg de ui, tomaat en koriander toe. Breng op smaak met zout en meng alles voorzichtig.",
+        "ja": "タマネギ、トマト、コリアンダーを加えます。塩で味を整え、全体をやさしく混ぜます。",
+        "zh": "加入洋葱、番茄和香菜。按口味加盐，轻轻混合所有食材。"
+      },
+      "imagen": "/imagenes/guacamole_p5.jpg",
+      "videoYoutube": "https://www.youtube.com/embed/YPzG8Neb86g"
+    },
+    {
+      "numero": 6,
+      "texto": {
+        "es": "¡Receta completada! Has terminado el Guacamole Casero.",
+        "en": "Recipe complete! You have finished the Homemade Guacamole.",
+        "fr": "Recette terminée! Vous avez fini le Guacamole Maison.",
+        "de": "Rezept abgeschlossen! Sie haben das hausgemachte Guacamole fertiggestellt.",
+        "it": "Ricetta completata! Hai terminato il Guacamole Fatto in Casa.",
+        "pt": "Receita concluída! Você terminou o Guacamole Caseiro.",
+        "nl": "Recept voltooid! U heeft de Zelfgemaakte Guacamole afgerond.",
+        "ja": "レシピ完成！手作りグアカモレができました。",
+        "zh": "食谱完成！您已完成自制鳄梨酱。"
+      },
+      "imagen": "/imagenes/exito.jpg",
+      "videoYoutube": ""
+    }
+  ]
+}]

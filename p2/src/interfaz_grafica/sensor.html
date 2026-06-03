@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sensor de Gestos - Equipo 03</title>
+    <script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <style>
+        body { background: #222; color: white; text-align: center; font-family: sans-serif; }
+        video { width: 100%; max-width: 400px; border-radius: 10px; transform: scaleX(-1); }
+        #status { font-weight: bold; color: #0f0; margin-top: 20px; font-size: 1.2em; }
+    </style>
+</head>
+<body>
+    <h2>Cámara del Cocinero</h2>
+    <video id="myvideo"></video>
+    <div id="status">Cargando IA...</div>
+    <p>Asegúrate de estar en un sitio con luz</p>
+    
+    <script src="/funciones_js/sensor.js"></script>
+</body>
+</html>
