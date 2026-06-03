@@ -1,0 +1,21 @@
+{
+  "name": "sistemas_interactivos",
+  "version": "1.0.0",
+  "description": "Este es el repositorio para el trabajo final y todos los trabajos de Sistemas Interactivos y Ubicuos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanFranciscoSalor/SISTEMAS_INTERACTIVOS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JuanFranciscoSalor/SISTEMAS_INTERACTIVOS/issues"
+  },
+  "homepage": "https://github.com/JuanFranciscoSalor/SISTEMAS_INTERACTIVOS#readme"
+}
